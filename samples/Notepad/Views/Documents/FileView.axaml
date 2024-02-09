@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:documents="using:Notepad.ViewModels.Documents"
+             x:DataType="documents:FileViewModel"
              mc:Ignorable="d"
              d:DesignWidth="300" d:DesignHeight="400">
   <Grid RowDefinitions="*,Auto">
@@ -12,9 +14,6 @@
              FontFamily="Consolas, Inconsolata"
              FontWeight="Light"
              FontSize="14"
-             SelectionStart="{Binding SelectionStart, Mode=TwoWay}"
-             SelectionEnd="{Binding SelectionEnd, Mode=TwoWay}"
-             CaretIndex="{Binding CaretIndex, Mode=TwoWay}"
              TextWrapping="NoWrap"
              Text="{Binding Text}"
              Grid.Row="0" />

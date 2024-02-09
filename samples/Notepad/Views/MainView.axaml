@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:views="using:Notepad.Views"
              xmlns:vm="using:Notepad.ViewModels"
+             x:DataType="vm:MainWindowViewModel"
              mc:Ignorable="d"
              d:DesignWidth="700" d:DesignHeight="350">
   <Design.DataContext>
