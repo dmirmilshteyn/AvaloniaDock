@@ -9,13 +9,14 @@
     <AvaloniaNameGeneratorBehavior>OnlyProperties</AvaloniaNameGeneratorBehavior>
   </PropertyGroup>
 
-  <Import Project="..\..\build\Base.props" />
-  <Import Project="..\..\build\ReferenceAssemblies.props" />
-  <Import Project="..\..\build\Avalonia.props" />
-  <Import Project="..\..\build\Avalonia.Themes.Fluent.props" />
-  <Import Project="..\..\build\Avalonia.Desktop.props" />
-  <Import Project="..\..\build\Avalonia.Diagnostics.props" Condition="'$(Configuration)' == 'Debug'" />
-  <Import Project="..\..\build\CommunityToolkit.Mvvm.props" />
+  <ItemGroup>
+    <PackageReference Include="Avalonia"/>
+    <PackageReference Include="Avalonia.Themes.Fluent"/>
+    <PackageReference Include="Avalonia.Fonts.Inter"/>
+    <PackageReference Include="Avalonia.Desktop"/>
+    <PackageReference Include="Avalonia.Diagnostics" Condition="'$(Configuration)' == 'Debug'"/>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dock.Model.Mvvm\Dock.Model.Mvvm.csproj" />

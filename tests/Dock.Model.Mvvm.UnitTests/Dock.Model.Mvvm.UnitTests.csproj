@@ -10,9 +10,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <Import Project="..\..\build\Base.props" />
-  <Import Project="..\..\build\XUnit.props" />
-  <Import Project="..\..\build\CommunityToolkit.Mvvm.props" />
+  <ItemGroup>
+    <PackageReference Include="xunit"/>
+    <PackageReference Include="xunit.abstractions"/>
+    <PackageReference Include="xunit.assert"/>
+    <PackageReference Include="xunit.core"/>
+    <PackageReference Include="xunit.extensibility.core"/>
+    <PackageReference Include="xunit.extensibility.execution"/>
+    <PackageReference Include="xunit.runner.console"/>
+    <PackageReference Include="xunit.runner.visualstudio"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk"/>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dock.Model\Dock.Model.csproj" />
