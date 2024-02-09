@@ -82,13 +82,13 @@
       </ControlTemplate>
     </Setter>
 
-    <Style Selector="^/template/ Border#PART_Border">
+    <Style Selector="^/template/ Border#PART_Border" x:DataType="controls:IToolDock">
       <Setter Property="BorderThickness" Value="1 1 1 0" />
       <Setter Property="IsVisible"
               Value="{Binding GripMode, Converter={x:Static converters:GripModeConverters.IsVisibleVisibleConverter}}" />
     </Style>
 
-    <Style Selector="^:pointerover /template/ Border#PART_Border">
+    <Style Selector="^:pointerover /template/ Border#PART_Border" x:DataType="controls:IToolDock">
       <Setter Property="IsVisible"
               Value="{Binding GripMode, Converter={x:Static converters:GripModeConverters.IsVisibleAutoHideOrVisibleConverter}}" />
     </Style>
@@ -97,12 +97,12 @@
       <Setter Property="BorderThickness" Value="0" />
     </Style>
 
-    <Style Selector="^/template/ Panel#PART_Panel">
+    <Style Selector="^/template/ Panel#PART_Panel" x:DataType="controls:IToolDock">
       <Setter Property="IsVisible"
               Value="{Binding GripMode, Converter={x:Static converters:GripModeConverters.IsVisibleAutoHideOrHiddenConverter}}" />
     </Style>
 
-    <Style Selector="^:pointerover /template/ Panel#PART_Panel">
+    <Style Selector="^:pointerover /template/ Panel#PART_Panel" x:DataType="controls:IToolDock">
       <Setter Property="IsVisible"
               Value="{Binding GripMode, Converter={x:Static converters:GripModeConverters.IsVisibleVisibleOrHiddenConverter}}" />
     </Style>

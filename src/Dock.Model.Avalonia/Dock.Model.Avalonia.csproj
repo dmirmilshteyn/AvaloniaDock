@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <PackageId>Dock.Model.Avalonia</PackageId>
   </PropertyGroup>
 

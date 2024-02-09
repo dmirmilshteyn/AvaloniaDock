@@ -13,7 +13,6 @@
     <Setter Property="TextBlock.Foreground" Value="{DynamicResource DockThemeForegroundBrush}" />
     <Setter Property="WindowState" Value="Normal" />
     <Setter Property="UseLayoutRounding" Value="True" />
-    <Setter Property="Title" Value="{Binding ActiveDockable.Title}" />
     <Setter Property="SystemDecorations" Value="Full" />
     <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
     <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />
