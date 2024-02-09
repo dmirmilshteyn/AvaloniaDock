@@ -6,29 +6,17 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{C4E2763D-8CA1-4332-808F-E32E9F4DDA94}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		.nuke = .nuke
-		build.ps1 = build.ps1
-		build.sh = build.sh
 		global.json = global.json
 		build\dock.public.snk = build\dock.public.snk
-		azure-pipelines.yml = azure-pipelines.yml
+		NuGet.Config = NuGet.Config
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D16F65F7-7F44-40DB-B82A-1344A05D121D}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.TXT = LICENSE.TXT
 		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{E58CB250-1197-4D0F-BBC1-F9733B1B48DC}"
-	ProjectSection(SolutionItems) = preProject
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{9F77EE50-CC9F-4DDC-9524-55D56E63A840}"
-	ProjectSection(SolutionItems) = preProject
-		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "props", "props", "{A2F3E41E-D53C-49A1-9089-2FE2C3F0FE73}"
@@ -53,8 +41,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{71FD12F4-0BCB-422A-9FB0-4137E898E991}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dock.Avalonia.UnitTests", "tests\Dock.Avalonia.UnitTests\Dock.Avalonia.UnitTests.csproj", "{2A9959DB-769C-4524-A817-507C554615EA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\build\_build.csproj", "{D96A5888-05F6-482D-87EA-CC4608172F4D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad", "samples\Notepad\Notepad.csproj", "{6B9A56E5-2DCD-4046-8CC6-5C552D720FDF}"
 EndProject
@@ -105,10 +91,6 @@ Global
 		{2A9959DB-769C-4524-A817-507C554615EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9959DB-769C-4524-A817-507C554615EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9959DB-769C-4524-A817-507C554615EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D96A5888-05F6-482D-87EA-CC4608172F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D96A5888-05F6-482D-87EA-CC4608172F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D96A5888-05F6-482D-87EA-CC4608172F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D96A5888-05F6-482D-87EA-CC4608172F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B9A56E5-2DCD-4046-8CC6-5C552D720FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B9A56E5-2DCD-4046-8CC6-5C552D720FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B9A56E5-2DCD-4046-8CC6-5C552D720FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -158,12 +140,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E58CB250-1197-4D0F-BBC1-F9733B1B48DC} = {C4E2763D-8CA1-4332-808F-E32E9F4DDA94}
-		{9F77EE50-CC9F-4DDC-9524-55D56E63A840} = {C4E2763D-8CA1-4332-808F-E32E9F4DDA94}
 		{A2F3E41E-D53C-49A1-9089-2FE2C3F0FE73} = {C4E2763D-8CA1-4332-808F-E32E9F4DDA94}
 		{CFA60BDB-A297-44F6-8CEA-6D0B0B753367} = {2B045CC0-AA4B-44B1-9D92-459B71EC7AA3}
 		{4B46A85D-102E-46F5-9B74-F1616E850605} = {FC61A082-2335-4C45-A38C-1EBEEA7BBE0A}
-		{D96A5888-05F6-482D-87EA-CC4608172F4D} = {C4E2763D-8CA1-4332-808F-E32E9F4DDA94}
 		{6B9A56E5-2DCD-4046-8CC6-5C552D720FDF} = {2B045CC0-AA4B-44B1-9D92-459B71EC7AA3}
 		{CD220CCF-CF02-4BC3-A5DE-EC02D26F6477} = {FC61A082-2335-4C45-A38C-1EBEEA7BBE0A}
 		{2A9959DB-769C-4524-A817-507C554615EA} = {71FD12F4-0BCB-422A-9FB0-4137E898E991}
