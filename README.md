@@ -17,7 +17,7 @@ A docking layout system.
 
 First, clone the repository or download the latest zip.
 ```
-git clone https://github.com/wieslawsoltes/Dock.git
+git clone https://github.com/dmirmilshteyn/AvaloniaDock.git
 ```
 
 ### Build using .NET Core
@@ -38,18 +38,6 @@ You can find the packages here [NuGet](https://www.nuget.org/packages/Dock.Avalo
 ```powershell
 Install-Package Dock.Avalonia
 Install-Package Dock.Model.Mvvm
-```
-
-or by using nightly build feed:
-* Add `https://www.myget.org/F/dock-nightly/api/v2` to your package sources
-* Alternative nightly build feed `https://pkgs.dev.azure.com/wieslawsoltes/GitHub/_packaging/Nightly/nuget/v3/index.json`
-* Update your package using `Dock` feed
-
-and install the package like this:
-
-```powershell
-Install-Package Dock.Avalonia -Pre
-Install-Package Dock.Model.Mvvm -Pre
 ```
 
 ## Resources
