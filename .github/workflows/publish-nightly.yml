@@ -11,6 +11,7 @@ jobs:
     name: Build and publish
     runs-on: ubuntu-latest
     env:
+      Configuration: Release
       VersionSuffix: beta.${{ github.run_number }}
       
     steps:
@@ -24,8 +25,8 @@ jobs:
     - name: Install wasm-tools
       run: dotnet workload install wasm-tools wasm-experimental
     - name: Test
-      run: dotnet test -c Release
+      run: dotnet test
     - name: Pack
-      run: dotnet pack -c Release
+      run: dotnet pack
     - name: Publish
-      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols --api-key ${{ secrets.PAT }}
