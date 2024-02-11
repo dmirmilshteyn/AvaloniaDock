@@ -28,4 +28,4 @@ jobs:
     - name: Pack
       run: dotnet pack -c Release
     - name: Publish
-      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols
+      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols --api-key ${{ secrets.GITHUB_TOKEN }}
