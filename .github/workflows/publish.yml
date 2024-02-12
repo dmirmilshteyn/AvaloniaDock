@@ -1,27 +1,22 @@
-name: Publish (Nightly)
+name: Publish
 
 on:
   push:
-    branches:
-    - master
+    tags:  
+    - '*'
 
 jobs:
 
   build:
-    name: Publish (Nightly)
+    name: Publish
     runs-on: ubuntu-latest
     env:
       Configuration: Release
-      VersionSuffix: beta.${{ github.run_number }}
       
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
-      with:
-        source-url: https://nuget.pkg.github.com/dmirmilshteyn/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Install wasm-tools
       run: dotnet workload install wasm-tools wasm-experimental
     - name: Test
@@ -29,4 +24,4 @@ jobs:
     - name: Pack
       run: dotnet pack
     - name: Publish
-      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols --api-key ${{ secrets.PAT }}
+      run: dotnet nuget push ./**/*.nupkg --skip-duplicate --no-symbols --api-key ${{ secrets.NUGET_API_KEY }}
