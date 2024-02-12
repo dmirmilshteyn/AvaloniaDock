@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Dock.Model.Avalonia</PackageId>
+    <PackageId>EmberDock.Model.Avalonia</PackageId>
   </PropertyGroup>
 
   <Import Project="..\..\build\SignAssembly.props" />

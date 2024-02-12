@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Dock.Serializer</PackageId>
+    <PackageId>EmberDock.Serializer</PackageId>
   </PropertyGroup>
 
   <Import Project="..\..\build\SignAssembly.props" />

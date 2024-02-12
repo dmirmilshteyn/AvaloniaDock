@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Dock.Model.ReactiveUI</PackageId>
+    <PackageId>EmberDock.Model.ReactiveUI</PackageId>
   </PropertyGroup>
 
   <Import Project="..\..\build\SourceLink.props" />

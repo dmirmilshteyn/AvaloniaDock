@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Dock.Model</PackageId>
+    <PackageId>EmberDock.Model</PackageId>
   </PropertyGroup>
 
   <Import Project="..\..\build\SignAssembly.props" />

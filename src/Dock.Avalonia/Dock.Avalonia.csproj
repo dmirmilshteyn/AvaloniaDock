@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Dock.Avalonia</PackageId>
+    <PackageId>EmberDock.Avalonia</PackageId>
   </PropertyGroup>
   
   <ItemGroup>
