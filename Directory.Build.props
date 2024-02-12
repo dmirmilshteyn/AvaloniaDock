@@ -6,7 +6,7 @@
     <Description>A docking layout system.</Description>
     <Copyright>Copyright © Daniel Mirmilshteyn, Wiesław Šoltés 2024</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/dmirmilshteyn/AvaloniaDock</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/dmirmilshteyn/EmberDock</PackageProjectUrl>
     <PackageTags>dock;docking;layout;avalonia</PackageTags>
   </PropertyGroup>
   <PropertyGroup>

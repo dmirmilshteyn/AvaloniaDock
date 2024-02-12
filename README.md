@@ -1,9 +1,9 @@
 # Dock
 
-[![CI](https://github.com/dmirmilshteyn/AvaloniaDock/actions/workflows/build.yml/badge.svg)](https://github.com/dmirmilshteyn/AvaloniaDock/actions/workflows/build.yml)
+[![CI](https://github.com/dmirmilshteyn/EmberDock/actions/workflows/build.yml/badge.svg)](https://github.com/dmirmilshteyn/EmberDock/actions/workflows/publish-nightly.yml)
 
-[![NuGet](https://img.shields.io/nuget/v/Dock.Model.svg)](https://www.nuget.org/packages/Dock.Avalonia)
-[![NuGet](https://img.shields.io/nuget/dt/Dock.Model.svg)](https://www.nuget.org/packages/Dock.Avalonia)
+[![NuGet](https://img.shields.io/nuget/v/Dock.Model.svg)](https://www.nuget.org/packages/EmberDock)
+[![NuGet](https://img.shields.io/nuget/dt/Dock.Model.svg)](https://www.nuget.org/packages/EmberDock)
 
 A docking layout system.
 
@@ -17,7 +17,7 @@ A docking layout system.
 
 First, clone the repository or download the latest zip.
 ```
-git clone https://github.com/dmirmilshteyn/AvaloniaDock.git
+git clone https://github.com/dmirmilshteyn/EmberDock.git
 ```
 
 ### Build using .NET Core
@@ -33,16 +33,16 @@ dotnet build src/Dock.Avalonia/Dock.Avalonia.csproj -c Release -f netstandard2.0
 
 Dock is delivered as a NuGet package.
 
-You can find the packages here [NuGet](https://www.nuget.org/packages/Dock.Avalonia/) and install the package like this:
+You can find the packages here [NuGet](https://www.nuget.org/packages/EmberDock.Avalonia/) and install the package like this:
 
 ```powershell
-Install-Package Dock.Avalonia
-Install-Package Dock.Model.Mvvm
+Install-Package EmberDock.Avalonia
+Install-Package EmberDock.Model.Mvvm
 ```
 
 ## Resources
 
-* [GitHub source code repository.](https://github.com/dmirmilshteyn/AvaloniaDock)
+* [GitHub source code repository.](https://github.com/dmirmilshteyn/EmberDock)
 
 ## License
 
