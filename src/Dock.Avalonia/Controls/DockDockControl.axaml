@@ -7,10 +7,9 @@
     <DockDockControl Width="300" Height="300" />
   </Design.PreviewWith>
 
-  <ControlTheme x:Key="{x:Type DockDockControl}" TargetType="DockDockControl">
+  <ControlTheme x:DataType="core:IDock" x:Key="{x:Type DockDockControl}" TargetType="DockDockControl">
 
-    <Setter Property="(ProportionalStackPanelSplitter.Proportion)" Value="{Binding Proportion}" x:DataType="core:IDock" />
-    <Setter Property="(ProportionalStackPanelSplitter.IsEmpty)" Value="{Binding IsEmpty}" x:DataType="core:IDock" />
+    <Setter Property="(ProportionalStackPanelSplitter.Proportion)" Value="{Binding Proportion}" />
 
     <Setter Property="Template">
       <ControlTemplate x:DataType="controls:IDockDock">

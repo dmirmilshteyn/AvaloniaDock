@@ -14,7 +14,6 @@ public abstract partial class FactoryBase
         InitDockable(dockable, dock);
         dock.VisibleDockables ??= CreateList<IDockable>();
         dock.VisibleDockables.Add(dockable);
-        dock.IsEmpty = dock.VisibleDockables.Count == 0;
         OnDockableAdded(dockable);
     }
 
@@ -26,7 +25,6 @@ public abstract partial class FactoryBase
             InitDockable(dockable, dock);
             dock.VisibleDockables ??= CreateList<IDockable>();
             dock.VisibleDockables.Insert(index, dockable);
-            dock.IsEmpty = dock.VisibleDockables.Count == 0;
             OnDockableAdded(dockable);
         }
     }
@@ -46,7 +44,6 @@ public abstract partial class FactoryBase
         }
 
         dock.VisibleDockables.Remove(dockable);
-        dock.IsEmpty = dock.VisibleDockables.Count == 0;
         OnDockableRemoved(dockable);
 
         var indexActiveDockable = index > 0 ? index - 1 : 0;
@@ -103,10 +100,8 @@ public abstract partial class FactoryBase
         if (sourceIndex >= 0 && targetIndex >= 0 && sourceIndex != targetIndex)
         {
             dock.VisibleDockables.RemoveAt(sourceIndex);
-            dock.IsEmpty = dock.VisibleDockables.Count == 0;
             OnDockableRemoved(sourceDockable);
             dock.VisibleDockables.Insert(targetIndex, sourceDockable);
-            dock.IsEmpty = dock.VisibleDockables.Count == 0;
             OnDockableAdded(sourceDockable);
             OnDockableMoved(sourceDockable);
             dock.ActiveDockable = sourceDockable;
@@ -178,10 +173,8 @@ public abstract partial class FactoryBase
                 if (sourceIndex < targetIndex)
                 {
                     targetDock.VisibleDockables.Insert(targetIndex + 1, sourceDockable);
-                    targetDock.IsEmpty = targetDock.VisibleDockables.Count == 0;
                     OnDockableAdded(sourceDockable);
                     targetDock.VisibleDockables.RemoveAt(sourceIndex);
-                    targetDock.IsEmpty = targetDock.VisibleDockables.Count == 0;
                     OnDockableRemoved(sourceDockable);
                     OnDockableMoved(sourceDockable);
                 }
@@ -191,10 +184,8 @@ public abstract partial class FactoryBase
                     if (targetDock.VisibleDockables.Count + 1 > removeIndex)
                     {
                         targetDock.VisibleDockables.Insert(targetIndex, sourceDockable);
-                        targetDock.IsEmpty = targetDock.VisibleDockables.Count == 0;
                         OnDockableAdded(sourceDockable);
                         targetDock.VisibleDockables.RemoveAt(removeIndex);
-                        targetDock.IsEmpty = targetDock.VisibleDockables.Count == 0;
                         OnDockableRemoved(sourceDockable);
                         OnDockableMoved(sourceDockable);
                     }
@@ -204,7 +195,6 @@ public abstract partial class FactoryBase
             {
                 RemoveDockable(sourceDockable, true);
                 targetDock.VisibleDockables.Insert(targetIndex, sourceDockable);
-                targetDock.IsEmpty = targetDock.VisibleDockables.Count == 0;
                 OnDockableAdded(sourceDockable);
                 OnDockableMoved(sourceDockable);
                 InitDockable(sourceDockable, targetDock);
@@ -230,11 +220,9 @@ public abstract partial class FactoryBase
             var originalTargetDockable = dock.VisibleDockables[targetIndex];
 
             dock.VisibleDockables[targetIndex] = originalSourceDockable;
-            dock.IsEmpty = dock.VisibleDockables.Count == 0;
             OnDockableRemoved(originalTargetDockable);
             OnDockableAdded(originalSourceDockable);
             dock.VisibleDockables[sourceIndex] = originalTargetDockable;
-            dock.IsEmpty = dock.VisibleDockables.Count == 0;
             OnDockableAdded(originalTargetDockable);
             OnDockableSwapped(originalSourceDockable);
             OnDockableSwapped(originalTargetDockable);
@@ -364,7 +352,6 @@ public abstract partial class FactoryBase
                     if (toolDock.VisibleDockables is not null)
                     {
                         toolDock.VisibleDockables.Remove(dockable);
-                        toolDock.IsEmpty = toolDock.VisibleDockables.Count == 0;
                         OnDockableRemoved(dockable);
                     }
 
@@ -469,7 +456,6 @@ public abstract partial class FactoryBase
                     }
 
                     toolDock.VisibleDockables.Add(dockable);
-                    toolDock.IsEmpty = toolDock.VisibleDockables.Count == 0;
                     OnDockableAdded(dockable);
                     
                     // TODO: Handle ActiveDockable state.

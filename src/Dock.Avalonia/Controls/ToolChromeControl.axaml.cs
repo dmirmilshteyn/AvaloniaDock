@@ -81,8 +81,7 @@ public class ToolChromeControl : ContentControl
         base.OnApplyTemplate(e);
 
         //On linux we dont attach to the HostWindow because of inconsistent drag behaviour
-        if (VisualRoot is HostWindow window 
-            && (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX)))
+        if (VisualRoot is HostWindow window && RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             Grip = e.NameScope.Find<Control>("PART_Grip");
             CloseButton = e.NameScope.Find<Button>("PART_CloseButton");

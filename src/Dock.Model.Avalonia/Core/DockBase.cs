@@ -69,12 +69,6 @@ public abstract class DockBase : DockableBase, IDock
         AvaloniaProperty.RegisterDirect<DockBase, bool>(nameof(IsActive), o => o.IsActive, (o, v) => o.IsActive = v);
 
     /// <summary>
-    /// Defines the <see cref="IsEmpty"/> property.
-    /// </summary>
-    public static readonly DirectProperty<DockBase, bool> IsEmptyProperty =
-        AvaloniaProperty.RegisterDirect<DockBase, bool>(nameof(IsEmpty), o => o.IsEmpty, (o, v) => o.IsEmpty = v);
-
-    /// <summary>
     /// Defines the <see cref="IsCollapsable"/> property.
     /// </summary>
     public static readonly DirectProperty<DockBase, bool> IsCollapsableProperty =
@@ -100,7 +94,6 @@ public abstract class DockBase : DockableBase, IDock
     private double _proportion = double.NaN;
     private DockMode _dock = DockMode.Center;
     private bool _isActive;
-    private bool _isEmpty;
     private bool _isCollapsable = true;
     private bool _canGoBack;
     private bool _canGoForward;
@@ -193,15 +186,6 @@ public abstract class DockBase : DockableBase, IDock
     {
         get => _isActive;
         set => SetAndRaise(IsActiveProperty, ref _isActive, value);
-    }
-
-    /// <inheritdoc/>
-    [DataMember(IsRequired = false, EmitDefaultValue = true)]
-    [JsonPropertyName("IsEmpty")]
-    public bool IsEmpty
-    {
-        get => _isEmpty;
-        set => SetAndRaise(IsEmptyProperty, ref _isEmpty, value);
     }
 
     /// <inheritdoc/>
